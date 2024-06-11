@@ -1,4 +1,6 @@
-- name: "Ansible | Creating a file with content"
-  copy:
-    dest: "/tmp/test"
-    content: "Example file"
+- hosts: localhost
+  tasks:
+  - name: "Ansible | Creating a file with content"
+    copy:
+      dest: "/tmp/test"
+      content: "Example file"
