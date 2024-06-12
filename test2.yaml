@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+  - name: "Ansible | Creating a file with content"
+    copy:
+      dest: "/tmp/test2"
+      content: "Fact={{ ansible_local['meta-data']['foo'] | default('not found') }}\n"

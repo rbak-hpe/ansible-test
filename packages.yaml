@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+  - name: "Ansible | Installing packages"
+    package:
+      name: {{ ansible_local["meta-data"]["packages"] | default([])}}
+      state: latest
+
